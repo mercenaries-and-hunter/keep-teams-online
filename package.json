@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "build": "cross-env EXTENSION_NAME=eilakanollhbgdoppbffeikcbkhmeloc webpack --config webpack-server.config.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cross-env EXTENSION_NAME=pbbdmfajhenpandbgeanadmmkonjkaja webpack --config webpack-client.config.js",
+    "build:server": "cross-env EXTENSION_NAME=pbbdmfajhenpandbgeanadmmkonjkaja webpack --config webpack-server.config.js",
     "build:dev": "npm run build:dev-client && npm run build:dev-server",
     "build:dev-client": "cross-env EXTENSION_NAME=ajgfeknmppbopbbebobgeipecjgclbge webpack --config webpack-client.config.js",
     "build:dev-server": "cross-env EXTENSION_NAME=ajgfeknmppbopbbebobgeipecjgclbge webpack --config webpack-server.config.js"
