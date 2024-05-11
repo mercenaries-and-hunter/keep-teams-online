@@ -8,9 +8,11 @@ chrome.runtime.onMessageExternal.addListener(
     messageWatching
 );
 
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.action.setBadgeText({
-        text: "",
+chrome.runtime.onInstalled.addListener(async () => {
+    const thisState = await getItem('flag') ? 'on' : 'off';
+    // Set the action badge to the next state
+    await chrome.action.setBadgeText({
+        text: thisState,
     });
 });
 
