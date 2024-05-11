@@ -13,7 +13,6 @@
     },
     "default_title": "Keep Teams Online"
   },
-  "host_permissions": ["https://teams.microsoft.com/*"],
   "content_scripts": [
     {
       "matches": [
@@ -27,9 +26,7 @@
   ],
   "permissions": [
     "unlimitedStorage",
-    "storage",
-    "activeTab",
-    "tabs"
+    "storage"
   ],
   "background": {
     "service_worker": "server/index.js"
