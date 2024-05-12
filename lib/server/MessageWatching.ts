@@ -21,10 +21,12 @@ function messageWatching (request, sender, sendResponse) {
         return
     }
     if (request.args === "get-config") {
-        sendResponse({
-            flag:getItem('flag')
+        getItem('flag').then((e)=>{
+            sendResponse({
+                flag:e
+            })
         })
-        return
+        return true
     }
     return true
 }
