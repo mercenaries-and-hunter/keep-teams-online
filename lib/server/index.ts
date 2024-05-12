@@ -1,5 +1,5 @@
 import messageWatching from "./MessageWatching";
-import { getItem, saveItem } from "./utils";
+import { getItem, saveItem, sendMessageToAllTabs } from "./utils";
 
 chrome.runtime.onMessage.addListener(
     messageWatching
@@ -20,6 +20,9 @@ chrome.runtime.onInstalled.addListener(async () => {
 chrome.action?.onClicked.addListener(async () => {
     const nextState = await getItem('flag') ? 'off':'on';
     saveItem('flag',!await getItem('flag'));
+    sendMessageToAllTabs({
+        type:nextState
+    });
     // Set the action badge to the next state
     await chrome.action.setBadgeText({
         text: nextState,
