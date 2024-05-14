@@ -6,6 +6,9 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "cross-env EXTENSION_NAME=pbbdmfajhenpandbgeanadmmkonjkaja webpack --config webpack-client.config.js",
     "build:server": "cross-env EXTENSION_NAME=pbbdmfajhenpandbgeanadmmkonjkaja webpack --config webpack-server.config.js",
+    "build:edge": "npm run build:edge:client && npm run build:edge:server",
+    "build:edge:client": "cross-env EXTENSION_NAME=dkpafjadmkblfcjgalmlkkamacdjopdo webpack --config webpack-client.config.js",
+    "build:edge:server": "cross-env EXTENSION_NAME=dkpafjadmkblfcjgalmlkkamacdjopdo webpack --config webpack-server.config.js",
     "build:dev": "npm run build:dev-client && npm run build:dev-server",
     "build:dev-client": "cross-env EXTENSION_NAME=ajgfeknmppbopbbebobgeipecjgclbge webpack --config webpack-client.config.js",
     "build:dev-server": "cross-env EXTENSION_NAME=ajgfeknmppbopbbebobgeipecjgclbge webpack --config webpack-server.config.js"
