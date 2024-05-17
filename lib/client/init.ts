@@ -32,7 +32,10 @@ class Setting {
       this.cancelMock();
     }
     this.mockJob = setInterval(() => {
-      document.dispatchEvent(new MouseEvent('mousemove', { bubbles: true }))
+      // for teams
+      document.dispatchEvent(new MouseEvent('mousemove', { bubbles: true }));
+      // for slack
+      document.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
     }, 4 * 60 * 1000);
     this.mocking = true;
   }

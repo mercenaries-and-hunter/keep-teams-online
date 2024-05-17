@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "keep-teams-online",
-  "description": "keep teams online",
-  "version": "0.3",
+  "description": "keep teams and slack online",
+  "version": "0.4",
   "action": {
     "default_icon": {
       "128": "128x128.png",
@@ -16,7 +16,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://teams.microsoft.com/*"
+        "https://teams.microsoft.com/*",
+        "https://app.slack.com/*"
       ],
       "js": [
         "client/init.js"
@@ -38,7 +39,8 @@
         "client/init.js"
       ],
       "matches": [
-        "https://teams.microsoft.com/*"
+        "https://teams.microsoft.com/*",
+        "https://app.slack.com/*"
       ]
     }
   ],
@@ -48,7 +50,8 @@
       "eilakanollhbgdoppbffeikcbkhmeloc"
     ],
     "matches": [
-      "https://teams.microsoft.com/*"
+      "https://teams.microsoft.com/*",
+      "https://app.slack.com/*"
     ],
     "accepts_tls_channel_id": false
   }
